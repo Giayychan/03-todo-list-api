@@ -7,4 +7,10 @@ router.post('/', (req, res) => {
 	})
 })
 
+router.get('/', (req, res) => {
+	Items.find({}).then(data => {
+		res.send(data)
+	})
+})
+
 module.exports = router
