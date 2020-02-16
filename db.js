@@ -1,7 +1,9 @@
 let mongoose = require('mongoose')
+require('dotenv').config()
+let database = process.env.DATABASE
 
 module.exports = mongoose.connect(
-	'mongodb://localhost:27017/todo-list',
+	database,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
