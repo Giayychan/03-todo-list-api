@@ -19,4 +19,10 @@ router.patch('/:id', (req, res) => {
 	})
 })
 
+router.delete('/:id', (req, res) => {
+	Items.findByIdAndDelete(req.params.id).then(data => {
+		res.send(data)
+	})
+})
+
 module.exports = router
