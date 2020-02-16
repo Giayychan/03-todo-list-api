@@ -13,4 +13,10 @@ router.get('/', (req, res) => {
 	})
 })
 
+router.patch('/:id', (req, res) => {
+	Items.findByIdAndUpdate(req.params.id, { name: 'Sleeping' }, { new: true }).then(data => {
+		res.send(data)
+	})
+})
+
 module.exports = router
