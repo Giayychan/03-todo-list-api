@@ -1,6 +1,5 @@
-let mongoose = require('mongoose')
-require('dotenv').config()
-let database = process.env.DATABASE
+const mongoose = require('mongoose')
+const database = process.env.DATABASE
 
 module.exports = mongoose.connect(
 	database,
